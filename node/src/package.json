@@ -1,0 +1,28 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "description": "Proyecto preparado para el exámen de la asignatura \"Desarrollo web en entorno servidor\" del año 2023 en Gimbernat Formación",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm install && node",
+    "start-dev": "npm install && nodemon --legacy-watch"
+  },
+  "author": "fmesasc",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.1.0",
+    "mysql2": "^3.1.2",
+    "redis": "^4.6.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

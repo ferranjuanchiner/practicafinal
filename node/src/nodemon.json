@@ -1,0 +1,22 @@
+{
+    "restartable": "rs",
+    "ignore": [
+      ".git",
+      "node_modules/"
+    ],
+    "watch": [
+      "index.js",
+      ".env",
+      "package.json",
+      "config",
+      "controllers",
+      "middleware",
+      "models",
+      "services",
+      "routes"
+    ],
+    "events": {
+        "restart": "echo \"App restarted due to:\n'$FILENAME'\""
+    },
+    "exec": "node index.js"
+}
