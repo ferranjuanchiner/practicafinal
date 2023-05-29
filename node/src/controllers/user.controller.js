@@ -1,26 +1,9 @@
 const MongoDBUser = require('../models/user.model.mongodb');
-const RedisUser = require('../models/user.model.redis');
-const MysqlUser = require('../models/user.model.mysql');
 
 const auth = require('../services/auth.service.js');
 
-// Crear instancia de modelo dependiendo de la base de datos
-const dbType = process.env.DB_TYPE || 'mysql';
-let userModel;
-switch (dbType) {
-  case 'mysql':
-    userModel = new MysqlUser();
-    break;
-  case 'mongodb':
-    userModel = new MongoDBUser();
-    break;
-  case 'redis':
-    userModel = new RedisUser();
-    break;
-  default:
-    userModel = new RedisUser();
-}
-
+// Crear instancia de modelo de mongodb
+userModel = new MongoDBUser();
 
 // Create a new user
 exports.create = (req, res) => {
