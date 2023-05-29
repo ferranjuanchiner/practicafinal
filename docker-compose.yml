@@ -16,7 +16,5 @@ services:
     volumes:
       - ./node/src:/app
     depends_on:
-      - redis
       - mongodb
-      - mysql
     command: [ "npm", "run", "start-dev" ]
