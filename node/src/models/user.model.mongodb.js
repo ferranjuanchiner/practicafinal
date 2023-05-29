@@ -1,10 +1,11 @@
-const User = require('./user.model');
-const mongoClient = require('../services/mongodb.service');
+const User = require('./user.model.js');
+const mongoClient = require('../services/mongodb.service.js');
 
 class MongoDBUser extends User {
   constructor(database) {
     super(database);
-    this.collection = mongoClient.collection('users');
+    this.collection = mongoClient.db(database).collection('users');
+
   }
 
   async create(user) {
